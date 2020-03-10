@@ -1,0 +1,53 @@
+.child-wrapper {
+  padding: 10px;
+  border: 1px solid rgb(189, 2, 2);
+  border-radius: 5px;
+}
+
+.name-wrapper {
+  height: 30px;
+}
+
+.hidden {
+  color: rgba(12, 12, 12, 0.4);
+}
+
+.button-wrapper {
+  width: 140px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list {
+  list-style: none;
+
+  &-item {
+    margin: 5px 0;
+    border: 1px dashed greenyellow;
+    border-radius: 5px;
+
+    &__wrapper {
+      padding: 5px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    &__count {
+      margin-right: 10px;
+      font-size: 0.9rem;
+    }
+
+    &__data {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.message {
+  padding: 5px 0;
+  font-size: 0.5rem;
+  color: rgba(12, 12, 12, 0.6);
+}

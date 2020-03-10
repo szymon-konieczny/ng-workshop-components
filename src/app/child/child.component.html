@@ -1,0 +1,35 @@
+<div class="child-wrapper">
+  <h4>Child component</h4>
+
+  <div class="name-wrapper">
+    <div *ngIf="showName; else hidden">{{ name }}</div>
+    <ng-template #hidden>
+      <div class="hidden">Name is hidden!</div>
+    </ng-template>
+  </div>
+
+  <div class="button-wrapper">
+    <input type="checkbox" [(ngModel)]="showName" />
+    <button (click)="toggleName()">Toggle name visibility</button>
+  </div>
+
+  <div>
+    <h5>Users list from parent:</h5>
+    <ul class="list">
+      <li class="list-item" *ngFor="let user of users; let i = index">
+        <div class="list-item__wrapper">
+          <div class="list-item__count">{{ i }}</div>
+          <div class="list-item__data">
+            <div>Name: {{ user.name }}</div>
+            <div>Role: {{ user.role }}</div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <button (click)="updateName()" [disabled]="!showName">Update name</button>
+  <div class="message" *ngIf="!showName">
+    The update button is disabled while the above name is hidden
+  </div>
+</div>
