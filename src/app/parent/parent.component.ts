@@ -6,7 +6,7 @@ import { User } from '../interfaces/user.interface';
   templateUrl: './parent.component.html',
   styleUrls: ['./parent.component.scss'],
 })
-export class MyComponentComponent {
+export class ParentComponent {
   public name = 'Leon';
   public users: User[] = [
     {
